@@ -1,7 +1,8 @@
 import React from 'react'
-import Header from './components/Header'
 import { AppProvider } from './context/AppContext';
 import { useApp } from './context/AppContext';
+import Header from './components/Header'
+import Footer from './components/Footer';
 
 
 function AppContent() {
@@ -10,8 +11,10 @@ function AppContent() {
   return (
     <div className='min-h-screen bg-white'>
       <Header />
+      <main></main>
+      <Footer />
     </div>
-  )
+  );
 }
 function App() {
   return (
