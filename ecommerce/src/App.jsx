@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import ShopPage from './components/ShopPage';
+import AboutPage from './components/AboutPage';
 
 
 function AppContent() {
@@ -14,6 +15,8 @@ function AppContent() {
     switch (currentPage) {
       case 'shop':
         return <ShopPage />
+      case 'about':
+        return <AboutPage />
       default:
       return (
         <>
