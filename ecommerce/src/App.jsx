@@ -4,6 +4,7 @@ import { useApp } from './context/AppContext';
 import Header from './components/Header'
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
+import ShopPage from './components/ShopPage';
 
 
 function AppContent() {
@@ -11,6 +12,8 @@ function AppContent() {
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'shop':
+        return <ShopPage />
       default:
       return (
         <>
