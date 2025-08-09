@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import ShopPage from './components/ShopPage';
 import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 
 
 function AppContent() {
@@ -17,6 +18,8 @@ function AppContent() {
         return <ShopPage />
       case 'about':
         return <AboutPage />
+      case 'contact':
+        return <ContactPage />
       default:
       return (
         <>
