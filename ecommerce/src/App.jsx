@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection';
 import ShopPage from './components/ShopPage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import WishlistPage from './components/WishlistPage';
 
 
 function AppContent() {
@@ -15,11 +16,13 @@ function AppContent() {
   const renderPage = () => {
     switch (currentPage) {
       case 'shop':
-        return <ShopPage />
+        return <ShopPage />;
       case 'about':
-        return <AboutPage />
+        return <AboutPage />;
       case 'contact':
-        return <ContactPage />
+        return <ContactPage />;
+      case 'wishlist':
+        return <WishlistPage />
       default:
       return (
         <>
