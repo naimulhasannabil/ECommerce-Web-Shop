@@ -3,9 +3,9 @@ import { useApp } from "../context/AppContext";
 import ProductCard from './ProductCard';
 
 const ShopPage = () => {
-    const { filteredProducts, dispatch, sortBy, showFilters, priceRange } = useApp();
+  const { filteredProducts, dispatch, sortBy, showFilters, priceRange } = useApp();
 
-    const handleSortChange = (sortValue) => {
+  const handleSortChange = (sortValue) => {
     dispatch({ type: 'SET_SORT', payload: sortValue });
   };
 
@@ -28,39 +28,41 @@ const ShopPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Shop Header */}
-      <div className="bg-cream py-16">
-        <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold text-dark-gray font-playfair mb-4">Shop</h1>
-          <p className="text-secondary-600 max-w-2xl mx-auto">
+      <div className="bg-cream py-12 sm:py-16">
+        <div className="container-custom text-center px-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-gray font-playfair mb-4">
+            Shop
+          </h1>
+          <p className="text-secondary-600 max-w-2xl mx-auto text-sm sm:text-base">
             Discover our complete collection of premium furniture pieces
           </p>
         </div>
       </div>
 
-      <div className="container-custom py-12">
+      <div className="container-custom py-8 sm:py-12 px-4">
         {/* Filters and Sort Bar */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 space-y-4 lg:space-y-0">
-          <div className="flex items-center space-x-4">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 gap-3 sm:gap-0">
             <button
               onClick={toggleFilters}
-              className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-primary-500 transition-colors"
+              className="flex items-center justify-center sm:justify-start space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-primary-500 transition-colors w-full sm:w-auto"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z" />
               </svg>
               <span>Filters</span>
             </button>
-            <span className="text-secondary-600">
+            <span className="text-secondary-600 text-center sm:text-left">
               Showing {filteredProducts.length} results
             </span>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 gap-3 sm:gap-0">
             <span className="text-secondary-600">Sort by:</span>
             <select
               value={sortBy}
               onChange={(e) => handleSortChange(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500 w-full sm:w-auto"
             >
               <option value="default">Default</option>
               <option value="price-low">Price: Low to High</option>
@@ -74,7 +76,7 @@ const ShopPage = () => {
         {/* Filters Panel */}
         {showFilters && (
           <div className="bg-light-gray p-6 rounded-lg mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {/* Price Range */}
               <div>
                 <h3 className="font-semibold text-dark-gray mb-4">Price Range</h3>
@@ -136,7 +138,7 @@ const ShopPage = () => {
         )}
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {filteredProducts.map((product, index) => (
             <div
               key={product.id}
