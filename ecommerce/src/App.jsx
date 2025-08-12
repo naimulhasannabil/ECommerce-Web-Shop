@@ -10,6 +10,7 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import WishlistPage from './components/WishlistPage';
 import Cart from './components/Cart';
+import ProductModal from './components/ProductModal';
 import LoginModal from './components/LoginModal';
 import Footer from './components/Footer';
 
@@ -63,6 +64,7 @@ function AppContent() {
       </main>
       <Footer />
       <Cart />
+      <ProductModal />
       <LoginModal />
     </div>
   );
