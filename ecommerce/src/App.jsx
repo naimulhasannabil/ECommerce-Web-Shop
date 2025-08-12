@@ -2,7 +2,6 @@ import React from 'react'
 import { AppProvider } from './context/AppContext';
 import { useApp } from './context/AppContext';
 import Header from './components/Header'
-import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import CategoryFilter from './components/CategoryFilter';
 import ProductGrid from './components/ProductGrid';
@@ -11,6 +10,8 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import WishlistPage from './components/WishlistPage';
 import Cart from './components/Cart';
+import LoginModal from './components/LoginModal';
+import Footer from './components/Footer';
 
 
 function AppContent() {
@@ -62,6 +63,7 @@ function AppContent() {
       </main>
       <Footer />
       <Cart />
+      <LoginModal />
     </div>
   );
 }
