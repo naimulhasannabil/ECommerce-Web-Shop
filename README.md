@@ -54,8 +54,8 @@ A modern, responsive furniture e-commerce website built with React, Tailwind CSS
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/furniro-ecommerce.git
-   cd furniro-ecommerce
+   git clone https://github.com/yourusername/ecommerce.git
+   cd ecommerce
    ```
 
 2. **Install dependencies**
@@ -82,7 +82,7 @@ The built files will be in the `dist` directory, ready for deployment.
 ## 📁 Project Structure
 
 ```
-furniro-ecommerce/
+ecommerce/
 ├── public/
 │   └── vite.svg
 ├── src/
